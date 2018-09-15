@@ -1,0 +1,23 @@
+eureka:
+  client:
+    registryFetchIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://192.168.0.100:8761/eureka/
+
+zuul:
+  sensitiveHeaders:
+  routes:
+    account:
+      path: /account/**
+      service-id: doorje-account-service
+
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+
+ribbon:
+  SocketTimeout: 10000
+  ReadTimeout: 10000
