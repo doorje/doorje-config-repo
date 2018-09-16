@@ -3,3 +3,16 @@ eureka:
     registry-fetch-interval-seconds: 15
     service-url:
       defaultZone: http://192.168.0.100:8761/eureka/
+      
+hystrix:
+  command:
+    default:
+      execution:
+        timeout:
+          enabled: false
+
+ribbon:
+  eureka:
+    enable: true
+  SocketTimeout: 60000
+  ReadTimeout: 60000
