@@ -2,7 +2,7 @@ eureka:
   client:
     registry-fetch-interval-seconds: 15
     service-url:
-      defaultZone: ${doorje.eureka}/eureka/
+      defaultZone: ${doorje.eureka.uri}/eureka/
       
 hystrix:
   command:
