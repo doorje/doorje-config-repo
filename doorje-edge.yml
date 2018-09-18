@@ -1,8 +1,6 @@
 spring:
   session:
     store-type: jdbc
-    jdbc:
-      initialize-schema: always
   jpa:
     hibernate:
       ddl-auto: create-drop
@@ -14,7 +12,7 @@ spring:
     username: ${doorje.datasource.username}
     password: ${doorje.datasource.password}
     driver-class-name: com.mysql.jdbc.Driver
-    
+
 zuul:
   routes:  
     uaa:
@@ -27,6 +25,17 @@ eureka:
     registry-fetch-interval-seconds: 15
     service-url:
       defaultZone: ${doorje.eureka.uri}/eureka/
+      
+security:
+  oauth2:
+    client:
+      accessTokenUri: ${doorje.oauth2.uri}/uua/oauth/token
+      userAuthorizationUri: ${doorje.oauth2.uri}//uua/oauth/authorize
+      clientAuthenticationScheme: form
+    resource:
+      userInfoUri: ${doorje.oauth2.uri}/uaa/user
+      preferTokenInfo: false  
+  sessions: ALWAYS
       
 hystrix:
   command:
