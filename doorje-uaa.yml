@@ -1,0 +1,22 @@
+spring:
+  session:
+    store-type: jdbc
+    jdbc:
+      initialize-schema: always
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.MySQL57Dialect
+  datasource:
+    url: ${doorje.datasource.url}
+    username: ${doorje.datasource.username}
+    password: ${doorje.datasource.password}
+    driver-class-name: com.mysql.jdbc.Driver
+
+eureka:
+  client:
+    registry-fetch-interval-seconds: 15
+    service-url:
+      defaultZone: ${doorje.eureka.uri}/eureka/
