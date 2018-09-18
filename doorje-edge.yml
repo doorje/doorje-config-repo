@@ -14,6 +14,13 @@ spring:
     username: ${doorje.datasource.username}
     password: ${doorje.datasource.password}
     driver-class-name: com.mysql.jdbc.Driver
+    
+zuul:
+  routes:  
+    uaa:
+      path: /uaa/**
+      sensitiveHeaders:
+      serviceId: doorje-uaa
 
 eureka:
   client:
