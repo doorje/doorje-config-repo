@@ -13,7 +13,7 @@ spring:
     url: ${doorje.datasource.url}
     username: ${doorje.datasource.username}
     password: ${doorje.datasource.password}
-    driver-class-name: com.mysql.jdbc.Drive
+    driver-class-name: com.mysql.jdbc.Driver
     schema: classpath:/script/schema.sql
     data: classpath:/script/data.sql
     initialization-mode: always
