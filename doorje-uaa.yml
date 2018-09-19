@@ -16,6 +16,7 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
     schema: classpath:/script/schema.sql
     data: classpath:/script/data.sql
+    initialization-mode: always
 
 eureka:
   client:
