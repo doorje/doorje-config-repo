@@ -1,4 +1,7 @@
 eureka:
+  hostname: ${doorje.eureka.host}
   client:
     register-with-eureka: false
     fetch-registry: false
+    service-url:
+      defaultZone: http://${doorje.eureka.host}:8761/eureka
