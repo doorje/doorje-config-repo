@@ -14,13 +14,11 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 zuul:
-  ignoredServices: "*"
   routes:  
     uaa:
       path: /uaa/**
       sensitiveHeaders:
       serviceId: doorje-uaa
-      stripPrefix: true
 
 eureka:
   client:
