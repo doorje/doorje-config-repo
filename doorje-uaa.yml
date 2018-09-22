@@ -25,16 +25,3 @@ eureka:
     registry-fetch-interval-seconds: 5
     service-url:
       defaultZone: ${doorje.eureka.uri}/eureka/
-
-hystrix:
-  command:
-    default:
-      execution:
-        timeout:
-          enabled: false
-
-ribbon:
-  eureka:
-    enable: true
-  SocketTimeout: 100000
-  ReadTimeout: 100000
