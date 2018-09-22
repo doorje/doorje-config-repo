@@ -21,6 +21,10 @@ zuul:
       sensitiveHeaders:
       serviceId: doorje-uaa
       stripPrefix: true
+    doorje:
+      path: /doorje/**
+      serviceId: doorje-service
+      stripPrefix: true
 
 eureka:
   client:
