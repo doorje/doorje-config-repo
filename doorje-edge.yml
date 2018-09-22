@@ -14,6 +14,9 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 zuul:
+  host:
+    connect-timeout-millis: 100000
+    socket-timeout-millis: 100000
   routes:  
     uaa:
       path: /uaa/**
@@ -47,5 +50,5 @@ hystrix:
 ribbon:
   eureka:
     enable: true
-  SocketTimeout: 60000
-  ReadTimeout: 60000
+  SocketTimeout: 100000
+  ReadTimeout: 100000
