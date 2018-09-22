@@ -14,14 +14,13 @@ spring:
     driver-class-name: com.mysql.jdbc.Driver
 
 zuul:
-  host:
-    connect-timeout-millis: 100000
-    socket-timeout-millis: 100000
+  ignoredServices: "*"
   routes:  
     uaa:
       path: /uaa/**
       sensitiveHeaders:
       serviceId: doorje-uaa
+      stripPrefix: true
 
 eureka:
   client:
@@ -47,8 +46,9 @@ hystrix:
   command:
     default:
       execution:
-        timeout:
-          enabled: false
+        isolation:
+          thread:
+            timeoutInMilliseconds: 100000
 
 ribbon:
   eureka:
