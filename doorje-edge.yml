@@ -30,6 +30,9 @@ eureka:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
 security:
+  user:
+    name: root
+    password: password
   oauth2:
     client:
       accessTokenUri: ${doorje.oauth2.uri}/uua/oauth/token
