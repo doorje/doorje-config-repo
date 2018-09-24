@@ -1,8 +1,5 @@
 spring:
-  session:
-    store-type: jdbc
-    jdbc:
-      initialize-schema: always
+  session: NEVER
   jpa:
     hibernate:
       ddl-auto: none
