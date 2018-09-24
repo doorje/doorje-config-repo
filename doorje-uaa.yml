@@ -1,5 +1,9 @@
-spring:
+security:
   session: NEVER
+
+spring:
+  session:
+    store-type: jdbc
   jpa:
     hibernate:
       ddl-auto: none
