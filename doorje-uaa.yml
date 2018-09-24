@@ -1,5 +1,5 @@
 security:
-  sessions: NEVER
+  sessions: if-required
 
 spring:
   session:
