@@ -35,8 +35,8 @@ eureka:
 security:
   oauth2:
     client:
-      accessTokenUri: ${doorje.oauth2.uri}/uua/oauth/token
-      userAuthorizationUri: ${doorje.oauth2.uri}//uua/oauth/authorize
+      accessTokenUri: ${doorje.uaa.uri}/oauth/token
+      userAuthorizationUri: ${doorje.uaa.uri}/oauth/authorize
       clientAuthenticationScheme: form
     resource:
       userInfoUri: ${doorje.oauth2.uri}/uaa/user
