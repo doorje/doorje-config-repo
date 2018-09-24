@@ -1,5 +1,5 @@
 security:
-  session: NEVER
+  sessions: NEVER
 
 spring:
   session:
