@@ -35,11 +35,11 @@ eureka:
 security:
   oauth2:
     client:
-      accessTokenUri: ${doorje.uaa.uri}/oauth/token
-      userAuthorizationUri: ${doorje.uaa.uri}/oauth/authorize
+      accessTokenUri: ${doorje.oauth.token.uri}
+      userAuthorizationUri: ${doorje.oauth.authorization.uri}
       clientAuthenticationScheme: form
     resource:
-      userInfoUri: ${doorje.uaa.uri}/user
+      userInfoUri: ${doorje.oauth.userinfo.uri}
       preferTokenInfo: false  
   sessions: ALWAYS
       
