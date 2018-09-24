@@ -39,7 +39,7 @@ security:
       userAuthorizationUri: ${doorje.uaa.uri}/oauth/authorize
       clientAuthenticationScheme: form
     resource:
-      userInfoUri: ${doorje.oauth2.uri}/uaa/user
+      userInfoUri: ${doorje.uaa.uri}/user
       preferTokenInfo: false  
   sessions: ALWAYS
       
