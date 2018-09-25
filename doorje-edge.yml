@@ -16,15 +16,11 @@ spring:
 zuul:
   ignoredServices: "*"
   routes:  
-    uaa:
-      path: /uaa/**
-      sensitiveHeaders:
-      serviceId: doorje-uaa
-      stripPrefix: true
     doorje:
       path: /doorje/**
       serviceId: doorje-service
       stripPrefix: true
+      sensitiveHeaders:
 
 eureka:
   client:
@@ -33,15 +29,15 @@ eureka:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
 security:
+  sessions: ALWAYS
   oauth2:
     client:
       accessTokenUri: ${doorje.oauth.token.uri}
       userAuthorizationUri: ${doorje.oauth.authorization.uri}
-      clientAuthenticationScheme: form
+      clientId: ${doorje.oauth.client.id}
+      clientSecret: ${doorje.oauth.client.secret}
     resource:
       userInfoUri: ${doorje.oauth.userinfo.uri}
-      preferTokenInfo: false  
-  sessions: ALWAYS
       
 hystrix:
   command:
