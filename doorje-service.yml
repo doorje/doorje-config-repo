@@ -3,3 +3,8 @@ eureka:
     registry-fetch-interval-seconds: 5
     service-url:
       defaultZone: ${doorje.eureka.uri}/eureka/
+      
+security:
+  oauth2:
+    resource:
+      userInfoUri: ${doorje.oauth.userinfo.uri}
