@@ -19,8 +19,11 @@ zuul:
     doorje:
       path: /doorje/**
       serviceId: doorje-service
-      stripPrefix: true
-      sensitiveHeaders:
+      
+proxy:
+  auth:
+    routes:
+      doorje: oauth2
 
 eureka:
   client:
