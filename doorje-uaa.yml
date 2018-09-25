@@ -2,6 +2,8 @@ security:
   sessions: if-required
 
 spring:
+  session:
+    store-type: jdbc
   jpa:
     hibernate:
       ddl-auto: none
