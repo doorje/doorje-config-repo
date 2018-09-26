@@ -5,6 +5,7 @@ eureka:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
 security:
+  sessions: NEVER
   oauth2:
     resource:
       userInfoUri: ${doorje.oauth.userinfo.uri}
