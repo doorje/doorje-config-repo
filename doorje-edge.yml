@@ -20,11 +20,6 @@ zuul:
       path: /doorje/**
       serviceId: doorje-service
       
-proxy:
-  auth:
-    routes:
-      doorje: oauth2
-
 eureka:
   client:
     registry-fetch-interval-seconds: 5
