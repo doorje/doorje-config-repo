@@ -50,3 +50,8 @@ ribbon:
     enable: true
   SocketTimeout: 100000
   ReadTimeout: 100000
+  
+logging:
+  level:
+    org.springframework.security: DEBUG
+    org.springframework.web: DEBUG
