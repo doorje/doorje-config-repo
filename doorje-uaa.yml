@@ -1,6 +1,3 @@
-security:
-  sessions: if-required
-
 spring:
   jpa:
     hibernate:
