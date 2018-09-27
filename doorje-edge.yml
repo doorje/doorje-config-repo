@@ -1,6 +1,4 @@
 spring:
-  session:
-    store-type: jdbc
   jpa:
     hibernate:
       ddl-auto: update
@@ -27,7 +25,6 @@ eureka:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
 security:
-  sessions: ALWAYS
   oauth2:
     client:
       accessTokenUri: ${doorje.oauth.token.uri}
