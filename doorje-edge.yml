@@ -17,6 +17,11 @@ zuul:
     doorje:
       path: /doorje/**
       serviceId: doorje-service
+      
+proxy:
+  auth:
+    routes:
+      doorje: oauth2
             
 eureka:
   client:
@@ -25,6 +30,7 @@ eureka:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
 security:
+  sessions: ALWAYS
   oauth2:
     client:
       accessTokenUri: ${doorje.oauth.token.uri}
