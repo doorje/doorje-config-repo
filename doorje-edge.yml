@@ -1,28 +1,10 @@
-spring:
-  jpa:
-    hibernate:
-      ddl-auto: update
-    properties:
-      hibernate:
-        dialect: org.hibernate.dialect.MySQL57Dialect
-  datasource:
-    url: ${doorje.datasource.url}
-    username: ${doorje.datasource.username}
-    password: ${doorje.datasource.password}
-    driver-class-name: com.mysql.jdbc.Driver
-
 zuul:
   ignoredServices: "*"
   routes:  
     doorje:
       path: /doorje/**
       serviceId: doorje-service
-      
-proxy:
-  auth:
-    routes:
-      doorje: oauth2
-            
+                  
 eureka:
   client:
     registry-fetch-interval-seconds: 5
@@ -30,7 +12,6 @@ eureka:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
 security:
-  sessions: ALWAYS
   oauth2:
     client:
       accessTokenUri: ${doorje.oauth.token.uri}
