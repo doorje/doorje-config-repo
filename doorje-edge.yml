@@ -7,7 +7,7 @@ zuul:
 proxy:
   auth:
     routes:
-      doorje: oauth2
+      doorje: passthru
                   
 eureka:
   client:
