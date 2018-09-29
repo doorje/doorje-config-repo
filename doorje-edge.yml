@@ -6,13 +6,7 @@ zuul:
     mahen:
       path: /mahen/**
       url: http://124.41.243.111:9090/
-      
-proxy:
-  auth:
-    routes:
-      doorje: oauth2
-      mahen: oauth2
-                  
+                        
 eureka:
   client:
     registry-fetch-interval-seconds: 5
