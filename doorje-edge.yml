@@ -4,6 +4,16 @@ eureka:
     service-url:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
+security:
+  oauth2:
+    client:
+      accessTokenUri: ${doorje.oauth.token.uri}
+      userAuthorizationUri: ${doorje.oauth.authorization.uri}
+      clientId: ${doorje.oauth.client.id}
+      clientSecret: ${doorje.oauth.client.secret}
+    resource:
+      userInfoUri: ${doorje.oauth.userinfo.uri}
+      
 zuul:
   ignoredServices: "*"
   routes:  
