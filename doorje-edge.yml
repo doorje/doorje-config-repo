@@ -4,21 +4,12 @@ eureka:
     service-url:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
-spring:
-  cloud:
-    gateway:
-      discovery:
-        locator:
-          enabled: ture
-      routes:
-        - id: doorje
-          uri: lb://doorje-service
-          predicates:
-          - Path=/doorje/**
-        - id: root
-          uri: no://op
-          predicates:
-          - Path=/
+zuul:
+  ignoredServices: "*"
+  routes:  
+    doorje:
+      path: /doorje/**
+      serviceId: doorje-service
           
 hystrix:
   command:
@@ -34,13 +25,6 @@ ribbon:
   ConnectTimeout: 3000
   ReadTimeout: 60000
            
-management:
-  endpoints:
-    web:
-      exposure:
-        include: "*"
-
 logging:
   level:
     org.springframework.security: DEBUG
-    org.springframework.cloud.gateway: TRACE
