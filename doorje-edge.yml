@@ -38,6 +38,8 @@ hystrix:
           thread:
             timeoutInMilliseconds: 60000
 ribbon:
+  eureka:
+    enable: true
   ServerListRefreshInterval: 5000
   ConnectTimeout: 3000
   ReadTimeout: 60000
