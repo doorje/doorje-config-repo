@@ -18,7 +18,7 @@ zuul:
   ignoredServices: "*"
   routes:  
     doorje:
-      path: /doorje/**
+      path: /api/doorje/**
       serviceId: doorje-service
           
 hystrix:
