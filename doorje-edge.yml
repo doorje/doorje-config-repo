@@ -23,9 +23,9 @@ zuul:
     dashboard:
       path: /dashboard/**
       serviceId: doorje-dashboard
-    api:
-      path: /api/service/**
-      serviceId: doorje-service
+    service-account:
+      path: /service/account/**
+      serviceId: doorje-service-account
           
 hystrix:
   command:
