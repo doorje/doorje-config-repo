@@ -17,6 +17,9 @@ security:
 zuul:
   ignoredServices: "*"
   routes:
+    signup:
+      path: /signup/**
+      serviceId: doorje-signup
     admin:
       path: /admin/**
       serviceId: doorje-admin
@@ -26,6 +29,11 @@ zuul:
     service-account:
       path: /service/account/**
       serviceId: doorje-service-account
+      
+proxy:
+  auth:
+    routes:
+      signup: passthru
           
 hystrix:
   command:
