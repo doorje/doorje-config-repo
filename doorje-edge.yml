@@ -1,6 +1,6 @@
 eureka:
   client:
-    registry-fetch-interval-seconds: 5
+    registry-fetch-interval-seconds: 15
     service-url:
       defaultZone: ${doorje.eureka.uri}/eureka/
       
