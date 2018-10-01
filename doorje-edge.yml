@@ -16,9 +16,15 @@ security:
       
 zuul:
   ignoredServices: "*"
-  routes:  
-    doorje:
-      path: /api/doorje/**
+  routes:
+    admin:
+      path: /admin/**
+      serviceId: doorje-admin
+    dashboard:
+      path: /dashboard/**
+      serviceId: doorje-dashboard
+    api:
+      path: /api/service/**
       serviceId: doorje-service
           
 hystrix:
