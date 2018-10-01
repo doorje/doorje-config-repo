@@ -29,11 +29,6 @@ zuul:
     service-account:
       path: /service/account/**
       serviceId: doorje-service-account
-      
-proxy:
-  auth:
-    routes:
-      signup: passthru
           
 hystrix:
   command:
