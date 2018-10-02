@@ -47,6 +47,7 @@ ribbon:
 management:
   endpoints:
     health:
+      sensitive: false
       show-details: always
     web:
       exposure:
