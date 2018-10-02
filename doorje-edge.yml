@@ -43,6 +43,12 @@ ribbon:
   ServerListRefreshInterval: 5000
   ConnectTimeout: 10000
   ReadTimeout: 100000
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include: "*"
            
 logging:
   level:
